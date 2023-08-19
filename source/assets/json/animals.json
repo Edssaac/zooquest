@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Leão",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Carnivora",
+        "family": "Felidae",
+        "genus": "Panthera",
+        "species": "Panthera leo"
+    },
+    {
+        "name": "Escaravelho Sagrado",
+        "kingdom": "Animalia",
+        "phylum": "Arthropoda",
+        "class": "Insecta",
+        "order": "Coleoptera",
+        "family": "Scarabaeidae",
+        "genus": "Scarabaeus",
+        "species": "Scarabaeus sacer"
+    },
+    {
+        "name": "Tordo-americano",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Passeriformes",
+        "family": "Turdidae",
+        "genus": "Turdus",
+        "species": "Turdus migratorius"
+    },
+    {
+        "name": "Elefante Africano",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Proboscidea",
+        "family": "Elephantidae",
+        "genus": "Loxodonta",
+        "species": "Loxodonta africana"
+    },
+    {
+        "name": "Golfinho-comum",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Delphinidae",
+        "genus": "Delphinus",
+        "species": "Delphinus delphis"
+    },
+    {
+        "name": "Baleia Azul",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Cetacea",
+        "family": "Balaenopteridae",
+        "genus": "Balaenoptera",
+        "species": "Balaenoptera musculus"
+    },
+    {
+        "name": "Tigre",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Carnivora",
+        "family": "Felidae",
+        "genus": "Panthera",
+        "species": "Panthera tigris"
+    },
+    {
+        "name": "Pinguim-de-adélia",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Sphenisciformes",
+        "family": "Spheniscidae",
+        "genus": "Pygoscelis",
+        "species": "Pygoscelis adeliae"
+    },
+    {
+        "name": "Leopardo-das-neves",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Carnivora",
+        "family": "Felidae",
+        "genus": "Panthera",
+        "species": "Panthera uncia"
+    },
+    {
+        "name": "Avestruz",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Struthioniformes",
+        "family": "Struthionidae",
+        "genus": "Struthio",
+        "species": "Struthio camelus"
+    },
+    {
+        "name": "Gato",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Carnivora",
+        "family": "Felidae",
+        "genus": "Felis",
+        "species": "Felis catus"
+    },
+    {
+        "name": "Cachorro",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Carnivora",
+        "family": "Canidae",
+        "genus": "Canis",
+        "species": "Canis lupus familiaris"
+    }
+]
