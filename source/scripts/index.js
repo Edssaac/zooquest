@@ -1,4 +1,5 @@
 const gameConfig = {
+    guessed: false,
     animal: [],
     categories: {
         1: "kingdom",
@@ -78,10 +79,26 @@ modalHints.addEventListener("show.bs.modal", event => {
 })
 
 const guess = document.getElementById("guess");
+const guesses = document.getElementById("guesses");
 const validateGuess = () => {
     if (guess.value) {
-        appendGuess(guess.value);
+        const div = document.createElement("div");
+        div.innerHTML = `${guess.value} <br> ${levenshteinDistance(guess.value.toLowerCase(), gameConfig.animal.name.toLowerCase()).toFixed(2)}%`;
+
+        if (guess.value.toLowerCase() == gameConfig.animal.name.toLowerCase()) {
+            div.classList.add("alert", "alert-success", "valid-guess");
+
+            gameConfig.guessed = true;
+        } else {
+            div.classList.add("alert", "alert-warning", "invalid-guess");
+        }
+
         guess.value = "";
+        guesses.prepend(div);
+
+        if (gameConfig.guessed) {
+            document.getElementById("input-controll").innerHTML = "";
+        }
     }
 }
 
@@ -95,20 +112,6 @@ guess.addEventListener("keyup", ({ key }) => {
         validateGuess();
     }
 });
-
-const guesses = document.getElementById("guesses");
-const appendGuess = (guess) => {
-    const div = document.createElement("div");
-    div.innerHTML =  `${guess} <br> ${levenshteinDistance(guess.toLowerCase(), gameConfig.animal.name.toLowerCase()).toFixed(2)}%`;
-
-    if (guess.toLowerCase() == gameConfig.animal.name.toLowerCase()) {
-        div.classList.add("alert", "alert-success");
-    } else {
-        div.classList.add("alert", "alert-warning");
-    }
-
-    guesses.prepend(div);
-}
 
 const getOneRandomAnimal = (animals) => {
     const shuffleIndex = Math.floor(Math.random() * animals.length);
@@ -135,11 +138,7 @@ const start = () => {
 
 start();
 
-
 // pendências:
-
-// - animação para caso errado;
-// - animação para caso certo;
 // - adicionar texto de descrição do jogo no topo da página;
 // - adicionar pontuação (layout)
 

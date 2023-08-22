@@ -30,3 +30,50 @@ main {
     max-width: 250px;
     border-radius: 100%;
 }
+
+.invalid-guess {
+    animation-name: invalid-guess;
+    animation-duration: 600ms
+}
+
+@keyframes invalid-guess {
+
+    10%,
+    90% {
+        transform: translateX(-1px)
+    }
+
+    20%,
+    80% {
+        transform: translateX(2px)
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translateX(-4px)
+    }
+
+    40%,
+    60% {
+        transform: translateX(4px)
+    }
+}
+
+.valid-guess {
+    animation-name: valid-guess;
+    animation-duration: 600ms;
+    animation-timing-function: ease-in;
+}
+
+@keyframes valid-guess {
+
+    0%,
+    100% {
+        transform: rotateX(0)
+    }
+
+    50% {
+        transform: rotateX(-90deg)
+    }
+}
