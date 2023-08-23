@@ -97,9 +97,12 @@ const guesses = document.getElementById("guesses");
 const validateGuess = () => {
     if (guess.value) {
         const div = document.createElement("div");
-        div.innerHTML = `${guess.value} <br> ${levenshteinDistance(guess.value.toLowerCase(), gameConfig.animal.name.toLowerCase()).toFixed(2)}%`;
+        const guessedAnimal = guess.value.toLowerCase().trim();
+        const rightAnimal = gameConfig.animal.name.toLowerCase();
 
-        if (guess.value.toLowerCase() == gameConfig.animal.name.toLowerCase()) {
+        div.innerHTML = `${guess.value} <br> ${levenshteinDistance(guessedAnimal, rightAnimal).toFixed(2)}%`;
+
+        if (guessedAnimal == rightAnimal) {
             div.classList.add("alert", "alert-success", "valid-guess");
 
             gameConfig.guessed = true;
