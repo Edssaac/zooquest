@@ -19,13 +19,25 @@ const gameConfig = {
         5: "Família",
         6: "Gênero",
         7: "Espécie"
-    }
+    },
+    currentScore: 100,
+    totalScore: 0
+}
+
+const updateScore = () => {
+    const current = document.querySelector("#score #current small");
+    const total = document.querySelector("#score #total small");
+
+
+    current.innerText = gameConfig.currentScore;
+    total.innerText = gameConfig.totalScore;
 }
 
 const modalManager = new bootstrap.Modal('#modalHints');
 const showHint = document.getElementById("show-hint");
 showHint.addEventListener("click", () => {
     gameConfig.currentHint++;
+    gameConfig.currentScore -= 10;
 
     const button = document.querySelector(`[data-hint="${gameConfig.currentHint}"]`);
     button.classList.remove("btn-primary");
@@ -42,6 +54,8 @@ showHint.addEventListener("click", () => {
 
     button.append(small);
     button.append(p);
+
+    updateScore();
 
     modalManager.hide();
 });
@@ -89,15 +103,21 @@ const validateGuess = () => {
             div.classList.add("alert", "alert-success", "valid-guess");
 
             gameConfig.guessed = true;
+            gameConfig.totalScore = parseInt(gameConfig.totalScore) + parseInt(gameConfig.currentScore);
         } else {
             div.classList.add("alert", "alert-warning", "invalid-guess");
+
+            gameConfig.currentScore--;
         }
 
         guess.value = "";
         guesses.prepend(div);
 
+        updateScore();
+
         if (gameConfig.guessed) {
             document.getElementById("input-controll").innerHTML = "";
+            localStorage.setItem("totalScore", gameConfig.totalScore);
         }
     }
 }
@@ -129,18 +149,22 @@ const loadAnimals = async () => {
 const start = () => {
     window.onload = async () => {
         const animals = await loadAnimals();
+        const totalScore = localStorage.getItem("totalScore");
+
+        if (totalScore === null) {
+            localStorage.setItem("totalScore", 0);
+        }
 
         gameConfig.animal = getOneRandomAnimal(animals);
+        gameConfig.totalScore = totalScore;
+
+        updateScore();
 
         console.log(gameConfig.animal);
     }
 }
 
 start();
-
-// pendências:
-// - adicionar texto de descrição do jogo no topo da página;
-// - adicionar pontuação (layout)
 
 function levenshteinDistance(str1, str2) {
     const m = str1.length;

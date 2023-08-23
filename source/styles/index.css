@@ -21,6 +21,11 @@ body {
     user-select: none;
 }
 
+header h1 {
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
 main {
     min-height: 100vh;
 }

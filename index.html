@@ -21,39 +21,29 @@
 
     <script src="source/scripts/index.js" defer></script>
 
-    <title>Adivinhe o Animal</title>
+    <title>ZooQuest</title>
 </head>
 
 <body class="text-dark">
+    <header class="container text-center pt-3">
+        <h1>ZooQuest</h1>
+        <p>Explorando a Taxonomia Animal</p>
+        <hr>
+        <div id="score" class="row">
+            <p id="current" class="col">Pontuação Atual: <small></small></p>
+            <p id="total" class="col">Pontuação Total: <small></small></p>
+        </div>
+    </header>
 
-    <main class="container text-center py-3">
-        <div class="my-3">
+    <main class="container text-center pt-3">
+        <div>
             <img src="source/assets/images/animalriddle.jpg" alt="Adivinhe o animal!" title="Adivinhe o animal!"
                 class="img-riddle">
         </div>
 
-        <div class="modal fade text-dark" id="modalHints" tabindex="-1" aria-hidden="true" aria-modal="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="modalHintsLabel">Dica:</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p></p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Vou tentar mais um
-                            pouco</button>
-                        <button type="button" class="btn btn-success" id="show-hint">Aceito</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
+        <div class="pt-4">
             <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseHints"
-                class="btn btn-primary my-2">
+                class="btn btn-primary mb-3">
                 <i class="fa-solid fa-lightbulb"></i> Dicas
             </button>
 
@@ -103,8 +93,8 @@
             </div>
         </div>
 
-        <div id="input-controll" class="row g-3 justify-content-center text-dark my-3">
-            <div class="col-auto">
+        <div id="input-controll" class="row g-10 justify-content-center text-dark my-3">
+            <div class="col-auto col-md-6">
                 <input type="text" title="Quem é o animal?" id="guess" class="form-control">
             </div>
             <div class="col-auto">
@@ -118,6 +108,25 @@
         </div>
     </main>
 
+    <div class="modal fade text-dark" id="modalHints" tabindex="-1" aria-hidden="true" aria-modal="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalHintsLabel">Dica:</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                        Vou tentar mais um pouco
+                    </button>
+                    <button type="button" class="btn btn-success" id="show-hint">Aceito</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
