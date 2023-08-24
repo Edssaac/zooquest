@@ -8,7 +8,7 @@ const gameConfig = {
         4: "order",
         5: "family",
         6: "genus",
-        7: "species"
+        7: "specie"
     },
     currentHint: 1,
     hints: {
@@ -31,6 +31,13 @@ const updateScore = () => {
 
     current.innerText = gameConfig.currentScore;
     total.innerText = gameConfig.totalScore;
+}
+
+const changeImage = () => { 
+    const img = document.querySelector(".img-riddle");
+    const specie = gameConfig.animal.specie.replaceAll(' ', '_');
+
+    img.src = `source/assets/images/animals/${specie}.jpg`;
 }
 
 const modalManager = new bootstrap.Modal('#modalHints');
@@ -107,6 +114,10 @@ const validateGuess = () => {
 
             gameConfig.guessed = true;
             gameConfig.totalScore = parseInt(gameConfig.totalScore) + parseInt(gameConfig.currentScore);
+
+            changeImage();
+
+            window.scrollTo({top: 0, behavior: 'smooth'});
         } else {
             div.classList.add("alert", "alert-warning", "invalid-guess");
 

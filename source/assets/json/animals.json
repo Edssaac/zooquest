@@ -7,7 +7,7 @@
         "order": "Carnivora",
         "family": "Felidae",
         "genus": "Panthera",
-        "species": "Panthera leo"
+        "specie": "Panthera leo"
     },
     {
         "name": "Escaravelho Sagrado",
@@ -17,7 +17,7 @@
         "order": "Coleoptera",
         "family": "Scarabaeidae",
         "genus": "Scarabaeus",
-        "species": "Scarabaeus sacer"
+        "specie": "Scarabaeus sacer"
     },
     {
         "name": "Tordo-americano",
@@ -27,7 +27,7 @@
         "order": "Passeriformes",
         "family": "Turdidae",
         "genus": "Turdus",
-        "species": "Turdus migratorius"
+        "specie": "Turdus migratorius"
     },
     {
         "name": "Elefante Africano",
@@ -37,7 +37,7 @@
         "order": "Proboscidea",
         "family": "Elephantidae",
         "genus": "Loxodonta",
-        "species": "Loxodonta africana"
+        "specie": "Loxodonta africana"
     },
     {
         "name": "Golfinho-comum",
@@ -47,7 +47,7 @@
         "order": "Cetacea",
         "family": "Delphinidae",
         "genus": "Delphinus",
-        "species": "Delphinus delphis"
+        "specie": "Delphinus delphis"
     },
     {
         "name": "Baleia Azul",
@@ -57,7 +57,7 @@
         "order": "Cetacea",
         "family": "Balaenopteridae",
         "genus": "Balaenoptera",
-        "species": "Balaenoptera musculus"
+        "specie": "Balaenoptera musculus"
     },
     {
         "name": "Tigre",
@@ -67,7 +67,7 @@
         "order": "Carnivora",
         "family": "Felidae",
         "genus": "Panthera",
-        "species": "Panthera tigris"
+        "specie": "Panthera tigris"
     },
     {
         "name": "Pinguim-de-adélia",
@@ -77,7 +77,7 @@
         "order": "Sphenisciformes",
         "family": "Spheniscidae",
         "genus": "Pygoscelis",
-        "species": "Pygoscelis adeliae"
+        "specie": "Pygoscelis adeliae"
     },
     {
         "name": "Leopardo-das-neves",
@@ -87,7 +87,7 @@
         "order": "Carnivora",
         "family": "Felidae",
         "genus": "Panthera",
-        "species": "Panthera uncia"
+        "specie": "Panthera uncia"
     },
     {
         "name": "Avestruz",
@@ -97,7 +97,7 @@
         "order": "Struthioniformes",
         "family": "Struthionidae",
         "genus": "Struthio",
-        "species": "Struthio camelus"
+        "specie": "Struthio camelus"
     },
     {
         "name": "Gato",
@@ -107,7 +107,7 @@
         "order": "Carnivora",
         "family": "Felidae",
         "genus": "Felis",
-        "species": "Felis catus"
+        "specie": "Felis catus"
     },
     {
         "name": "Cachorro",
@@ -117,6 +117,6 @@
         "order": "Carnivora",
         "family": "Canidae",
         "genus": "Canis",
-        "species": "Canis lupus familiaris"
+        "specie": "Canis lupus familiaris"
     }
 ]
