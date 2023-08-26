@@ -33,11 +33,16 @@ const updateScore = () => {
     total.innerText = gameConfig.totalScore;
 }
 
-const changeImage = () => { 
+const changeImage = () => {
     const img = document.querySelector(".img-riddle");
     const specie = gameConfig.animal.specie.replaceAll(' ', '_');
 
     img.src = `source/assets/images/animals/${specie}.jpg`;
+
+    window.scroll({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
 
 const modalManager = new bootstrap.Modal('#modalHints');
@@ -117,7 +122,10 @@ const validateGuess = () => {
 
             changeImage();
 
-            window.scroll({top: 0, behavior: 'smooth'});
+            window.scroll({
+                top: 0,
+                behavior: 'smooth'
+            });
         } else {
             div.classList.add("alert", "alert-warning", "invalid-guess");
 
