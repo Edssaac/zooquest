@@ -117,7 +117,7 @@ const validateGuess = () => {
 
             changeImage();
 
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            window.scroll({top: 0, behavior: 'smooth'});
         } else {
             div.classList.add("alert", "alert-warning", "invalid-guess");
 
