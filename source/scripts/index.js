@@ -38,11 +38,6 @@ const changeImage = () => {
     const specie = gameConfig.animal.specie.replaceAll(' ', '_');
 
     img.src = `source/assets/images/animals/${specie}.jpg`;
-
-    window.scroll({
-        top: 0,
-        behavior: 'smooth'
-    });
 }
 
 const modalManager = new bootstrap.Modal('#modalHints');
