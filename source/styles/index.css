@@ -36,6 +36,26 @@ main {
     border-radius: 100%;
 }
 
+#last-guess {
+    display: flex;
+    justify-content: center;
+}
+
+#guesses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    width: 100%;
+    max-width: 700px;
+}
+
 .invalid-guess {
     animation-name: invalid-guess;
     animation-duration: 600ms

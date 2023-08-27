@@ -97,17 +97,17 @@
 
         <div id="input-controll" class="row g-10 justify-content-center text-dark my-3">
             <div class="col-auto col-md-6">
-                <input type="text" title="Quem é o animal?" id="guess" class="form-control">
+                <input type="text" title="Quem é o animal?" id="guess" class="form-control mb-3" maxlength="25">
             </div>
             <div class="col-auto">
                 <button type="button" title="Chutar" id="try-guess" class="btn btn-success">
                     <i class="fa-solid fa-circle-arrow-right fa-fade"></i>
                 </button>
             </div>
+            <div class="col-11" id="last-guess"></div>
         </div>
 
-        <div id="guesses" class="mt-5">
-        </div>
+        <div id="guesses" class="mt-4"></div>
     </main>
 
     <div class="modal fade text-dark" id="modalHints" tabindex="-1" aria-hidden="true" aria-modal="true">

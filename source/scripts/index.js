@@ -100,14 +100,17 @@ modalHints.addEventListener("show.bs.modal", event => {
 })
 
 const guess = document.getElementById("guess");
+const lastGuess = document.getElementById("last-guess");
 const guesses = document.getElementById("guesses");
 const validateGuess = () => {
     if (guess.value) {
         const div = document.createElement("div");
         const guessedAnimal = guess.value.toLowerCase().trim();
         const rightAnimal = gameConfig.animal.name.toLowerCase();
+        const levenshtein = levenshteinDistance(guessedAnimal, rightAnimal).toFixed(2);
 
-        div.innerHTML = `${guess.value} <br> ${levenshteinDistance(guessedAnimal, rightAnimal).toFixed(2)}%`;
+        div.innerHTML = `<span>${guess.value}</span> <span>${levenshtein}%</span>`;
+        div.dataset.place = levenshtein;
 
         if (guessedAnimal == rightAnimal) {
             div.classList.add("alert", "alert-success", "valid-guess");
@@ -128,8 +131,15 @@ const validateGuess = () => {
         }
 
         guess.value = "";
-        guesses.prepend(div);
 
+        lastGuess.innerHTML = "";
+        lastGuess.append(div);
+
+        const newGuess = div.cloneNode(true);
+        newGuess.classList.remove("invalid-guess");
+        guesses.prepend(newGuess);
+        
+        orderByDistance();
         updateScore();
 
         if (gameConfig.guessed) {
@@ -183,7 +193,7 @@ const start = () => {
 
 start();
 
-function levenshteinDistance(str1, str2) {
+const levenshteinDistance = (str1, str2) => {
     const m = str1.length;
     const n = str2.length;
 
@@ -215,4 +225,19 @@ function levenshteinDistance(str1, str2) {
     const similarityPercentage = ((maxLen - dp[m][n]) / maxLen) * 100;
 
     return similarityPercentage;
+}
+
+const orderByDistance = () => {
+    const divs = document.querySelectorAll('#guesses .alert');
+    const divArray = Array.from(divs);
+
+    divArray.sort((a, b) => {
+        const placeA = parseFloat(a.dataset.place);
+        const placeB = parseFloat(b.dataset.place);
+        return placeB - placeA;
+    });
+
+    const parent = divs[0].parentNode;
+
+    divArray.forEach(div => parent.appendChild(div));
 }
