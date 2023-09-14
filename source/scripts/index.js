@@ -138,7 +138,7 @@ const validateGuess = () => {
         const newGuess = div.cloneNode(true);
         newGuess.classList.remove("invalid-guess");
         guesses.prepend(newGuess);
-        
+
         orderByDistance();
         updateScore();
 
@@ -186,8 +186,6 @@ const start = () => {
         gameConfig.totalScore = totalScore;
 
         updateScore();
-
-        console.log(gameConfig.animal);
     }
 }
 
