@@ -1,17 +1,23 @@
-<div align="center">  
-    <b>ZooQuest</b>: Explorando a Taxonomia Animal
-</div>
+## Apresentação Geral
 
-<hr>
+**Nome do Projeto:** ZooQuest
 
-<div align="center">  
-    <p align="justify">Jogo web que testa o conhecimento dos jogadores sobre animais de forma divertida 
-    e desafiadora. Os jogadores devem adivinhar o nome dos animais usando pistas de taxonomia.</p>
-    <p align="justify">ZooQuest é uma experiência divertida e educativa para todas as idades, adequada para amantes da natureza, 
-    entusiastas da fauna e qualquer pessoa em busca de um desafio de trivia animal. Quanto mais você joga, mais você aprende sobre 
-    a incrível diversidade do reino animal e a taxonomia que o classifica. É hora de testar seu conhecimento e conquistar o reino animal no ZooQuest!</p>
-</div>
+**Descrição:**
 
-<div align="center">  
-    <img src="source/assets/images/zooquest.gif" alt="ZooQuest"/>
-</div>
+ZooQuest é um jogo web envolvente que desafia os jogadores a testarem seu conhecimento sobre animais de maneira divertida e estimulante. 
+Usando pistas de taxonomia, os participantes tentam adivinhar o nome dos animais em um ambiente educativo e cativante. Adequado para 
+todas as idades, ZooQuest promove uma experiência divertida e educativa, ideal para amantes da natureza e entusiastas da fauna. A cada 
+jogo, os jogadores exploram a incrível diversidade do reino animal e aprendem sobre sua classificação taxonômica. Prepare-se para 
+mergulhar neste desafio de trivia animal e conquistar o reino animal no ZooQuest!
+
+![demo](https://raw.githubusercontent.com/Edssaac/zooquest/main/source/assets/images/zooquest.gif)
+
+**Objetivo:**
+
+Promover o aprendizado divertido e a conscientização sobre a diversidade animal através de desafios de trivia educativos.
+
+**Tecnologias Utilizadas:**
+
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JAVASCRIPT](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
